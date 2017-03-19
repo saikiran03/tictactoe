@@ -46,9 +46,9 @@ class tictactoe:
 
     def evaluate(self):
         if self.win(1):
-            return 2
+            return 2 + sum([t.count('#') for t in self.game])/9.0
         if self.win(0):
-            return -20
+            return -2 - sum([t.count('#') for t in self.game])/9.0
         if self.draw():
             return 0
 
