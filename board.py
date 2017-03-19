@@ -48,7 +48,7 @@ class tictactoe:
         if self.win(1):
             return 2
         if self.win(0):
-            return -20
+            return -2
         if self.draw():
             return 0
 
