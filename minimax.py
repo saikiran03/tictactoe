@@ -1,5 +1,6 @@
 from board import tictactoe
 
+# minimax algorithm implementation
 def minimax(t, p):
     if p==1:
         child, ut = maximize(t)
@@ -7,6 +8,7 @@ def minimax(t, p):
         child, ut = minimize(t)
     return child
 
+# Maximizing player (you)
 def maximize(t):
     if t.terminal_test():
         return t, t.evaluate()
@@ -20,6 +22,7 @@ def maximize(t):
 
     return maxChild, maxUtility
 
+# Minimizing Player (computer)
 def minimize(t):
     if t.terminal_test():
         return t, t.evaluate()
